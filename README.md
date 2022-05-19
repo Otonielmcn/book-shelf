@@ -9,6 +9,11 @@ Is a Book Shelf that loads a list of books and allows the user to reorder books 
 In the project directory, you can run:
 
 ### Installation
+Use required node version.
+```
+nvm use
+```
+
 Install packages.
 ```bash
 npm install
