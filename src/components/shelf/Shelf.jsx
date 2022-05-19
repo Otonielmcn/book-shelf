@@ -5,7 +5,7 @@ import Book from './Book';
 import { fetchBooks } from './shelfAPI';
 
 import styles from './Shelf.module.css';
-import { setBooks, allowDeleteBooks } from '../../actions';
+import { setBooks, reorderBooks, allowDeleteBooks } from '../../actions';
 import clsx from 'clsx';
 
 function Shelf() {
@@ -19,11 +19,7 @@ function Shelf() {
   function handleOnDragEnd(result) {
     if (!result.destination) return;
 
-    const items = Array.from(books);
-    const [reorderedItem] = items.splice(result.source.index, 1);
-    items.splice(result.destination.index, 0, reorderedItem);
-
-    dispatch(setBooks(items));
+    dispatch(reorderBooks(result));
   }
 
   return (

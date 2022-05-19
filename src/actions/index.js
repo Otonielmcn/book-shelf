@@ -1,4 +1,4 @@
-import { ALLOW_DELETE_BOOKS, DELETE_BOOKS, SET_BOOKS } from './type';
+import { ALLOW_DELETE_BOOKS, DELETE_BOOKS, REORDER_BOOKS, SET_BOOKS } from './type';
 
 export const setBooks = (payload) => ({
   type: SET_BOOKS,
@@ -13,3 +13,8 @@ export const deleteBooks = (payload) => ({
 export const allowDeleteBooks = () => ({
   type: ALLOW_DELETE_BOOKS,
 });
+
+export const reorderBooks = (payload) => ({
+  type: REORDER_BOOKS,
+  payload,
+})
