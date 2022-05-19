@@ -1,0 +1,4 @@
+export const SET_BOOKS = 'SET_BOOKS';
+export const REODER_BOOKS = 'REODER_BOOKS';
+export const DELETE_BOOKS = 'DELETE_BOOKS';
+export const ALLOW_DELETE_BOOKS = 'ALLOW_DELETE_BOOKS';

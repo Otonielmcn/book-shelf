@@ -1,0 +1,78 @@
+
+.shelf {
+  width: 500px;
+  height: 450px;
+  position: relative;
+  border-bottom: 10px solid #000;
+}
+
+.shelf > ul {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin-block-end: 0;
+}
+
+.books > li {
+  display: inline-block;
+  height: 400px;
+}
+
+.book {
+  position: relative;
+  background-color: #2980b9;
+  color: #FFF;
+  border: 1px solid black;
+  border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+  height: 100%;
+  margin-right: 2px;
+  width: 40px;
+  writing-mode: vertical-rl;
+}
+
+.book > div {
+  color: white;
+  position: absolute;
+  writing-mode: horizontal-tb;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.book > div:hover{
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px #FFF;
+}
+
+.book::after {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 5px;
+}
+
+.allowDelete {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+  20% { transform: translate(-2px, 0px) rotate(0.5deg); }
+  30% { transform: translate(2px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(0.5deg); }
+  50% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+  60% { transform: translate(-2px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-0.5deg); }
+  80% { transform: translate(-1px, -1px) rotate(0.5deg); }
+  90% { transform: translate(1px, 1px) rotate(0deg); }
+  100% { transform: translate(1px, -1px) rotate(-0.5deg); }
+}
