@@ -8,14 +8,14 @@ export function* deleteBook(action) {
   yield put({ type: DELETE_BOOKS, action });
 }
 
-export function* reoderBooks(action) {
+export function* reorderBooks(action) {
   yield put({ type: REORDER_BOOKS, action });
 }
 
 function* booksSaga() {
   yield all([
     take(DELETE_BOOKS, deleteBook),
-    take(REORDER_BOOKS, reoderBooks),
+    take(REORDER_BOOKS, reorderBooks),
   ]);
 }
 
